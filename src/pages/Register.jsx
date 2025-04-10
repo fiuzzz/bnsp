@@ -79,7 +79,7 @@ const Register = () => {
     setIsSubmitting(true); // Set to true when submitting
 
     try {
-      await axios.post("http://localhost:3000/api/v1/pendaftar", formData);
+      await axios.post("https://faiz.rikpetik.site/api/v1/pendaftar", formData);
       setMessage("Pendaftaran berhasil!");
       setFormData({
         Nm_pendaftar: "",
