@@ -187,14 +187,17 @@ const Register = () => {
 
           <div className="mb-3">
             <label className="form-label">Jurusan</label>
-            <input
-              type="text"
-              className="form-control"
+            <select
+              className="form-select"
               name="Jurusan"
-              value={formData.Jurusan}
+              value={editData.Jurusan}
               onChange={handleChange}
               required
-            />
+            >
+              <option value="">-- Pilih Jurusan --</option>
+              <option value="IPA">IPA</option>
+              <option value="IPS">IPS</option>
+            </select>
           </div>
 
           <div className="mb-3">
