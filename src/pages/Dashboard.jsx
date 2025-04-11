@@ -21,7 +21,9 @@ const Dashboard = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://faiz.rikpetik.site/api/v1/pendaftar");
+      const res = await axios.get(
+        "https://faiz.rikpetik.site/api/v1/pendaftar"
+      );
       setPendaftar(res.data.data);
     } catch (error) {
       setMessage("Gagal memuat data pendaftar");
@@ -37,7 +39,7 @@ const Dashboard = () => {
     try {
       await axios.delete(`https://faiz.rikpetik.site/api/v1/pendaftar/${id}`);
       setMessage("Data berhasil dihapus");
-      fetchData(); 
+      fetchData();
     } catch (error) {
       setMessage("Gagal menghapus data");
     }
@@ -54,37 +56,31 @@ const Dashboard = () => {
   };
 
   const validateForm = () => {
-   
     if (!editData.Nm_pendaftar) {
       setMessage("Nama Lengkap harus diisi");
       return false;
     }
-    
-  
+
     if (!editData.Alamat) {
       setMessage("Alamat harus diisi");
       return false;
     }
-    
-    
+
     if (!editData.Jenis_kelamin) {
       setMessage("Jenis Kelamin harus dipilih");
       return false;
     }
 
-    
     if (!editData.No_hp || editData.No_hp.length < 10) {
       setMessage("No. HP harus berisi minimal 10 digit");
       return false;
     }
 
-    
     if (!editData.Asal_sekolah) {
       setMessage("Asal Sekolah harus diisi");
       return false;
     }
 
-  
     if (!editData.Jurusan) {
       setMessage("Jurusan harus diisi");
       return false;
@@ -95,19 +91,17 @@ const Dashboard = () => {
       return false;
     }
 
-    
     if (!editData.NISN || isNaN(editData.NISN)) {
       setMessage("NISN harus berupa angka");
       return false;
     }
 
-    return true; 
+    return true;
   };
 
   const handleSubmitEdit = async (e) => {
     e.preventDefault();
 
-   
     if (!validateForm()) return;
 
     try {
@@ -220,17 +214,14 @@ const Dashboard = () => {
 
                   <div className="mb-3">
                     <label className="form-label">Jurusan</label>
-                    <select
-                      className="form-select"
+                    <input
+                      type="text"
+                      className="form-control"
                       name="Jurusan"
                       value={editData.Jurusan}
                       onChange={handleChange}
                       required
-                    >
-                      <option value="">-- Pilih Jurusan --</option>
-                      <option value="IPA">IPA</option>
-                      <option value="IPS">IPS</option>
-                    </select>
+                    />
                   </div>
 
                   <div className="mb-3">

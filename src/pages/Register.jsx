@@ -190,7 +190,7 @@ const Register = () => {
             <select
               className="form-select"
               name="Jurusan"
-              value={editData.Jurusan}
+              value={formData.Jurusan}
               onChange={handleChange}
               required
             >
