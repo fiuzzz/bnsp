@@ -6,13 +6,12 @@ import "../App.css";
 const LandingPage = () => {
   return (
     <div>
-      {/* Hero Section */}
       <section className="hero text-white text-center py-5">
         <Container>
           <h1 className="display-3 fw-bold mb-4 animate__animated animate__fadeIn">
             Selamat Datang di SMK IT
           </h1>
-          <p className="lead mb-4 animate__animated animate__fadeIn">
+          <p className="lead mb-4 animate__animated animate__fadeIn text-warning">
             Temukan Pendidikan Berkualitas yang Menyiapkan Masa Depan Anda
           </p>
           <Button
@@ -26,7 +25,6 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      {/* Fitur Utama */}
       <section className="features py-5">
         <Container>
           <h2 className="text-center mb-5 fw-bold">Fitur Utama Kami</h2>
@@ -59,7 +57,6 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      {/* Call to Action (CTA) */}
       <section className="cta-section text-white text-center py-5">
         <Container>
           <h2 className="fw-bold mb-4">Mulailah Karier Anda Bersama Kami!</h2>
@@ -77,7 +74,7 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      {/* Footer */}
+ 
       <footer className="footer text-center py-4">
         <Container>
           <p className="mb-0">© 2025 SMK IT - Semua hak dilindungi.</p>
